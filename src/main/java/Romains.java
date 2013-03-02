@@ -16,7 +16,7 @@ public class Romains {
         int nombreArabe = 0;
         for (int index = 0; index < nombreRomain.length(); ) {
             if (leChiffreCourantEstPlusPetitQueLeSuivant(nombreRomain, index)) {
-                verifieQueLeChiffreCourantEstUneUnitéDuSuivant(nombreRomain, index);
+                vérifieQueLeChiffreCourantEstUneUnitéDuSuivant(nombreRomain, index);
                 nombreArabe += chiffreArabeSuivant(nombreRomain, index) - chiffreArabeCourant(nombreRomain, index);
                 index += 2;
             } else {
@@ -27,7 +27,7 @@ public class Romains {
         return nombreArabe;
     }
 
-    private void verifieQueLeChiffreCourantEstUneUnitéDuSuivant(String nombreRomain, int index) {
+    private void vérifieQueLeChiffreCourantEstUneUnitéDuSuivant(String nombreRomain, int index) {
         Preconditions.checkArgument(vérifieUnitéDe(chiffreRomainCourant(nombreRomain, index), chiffreRomainSuivant(nombreRomain, index)));
     }
 
